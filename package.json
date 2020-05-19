@@ -18,11 +18,25 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "statements": 85,
+        "branches": 85,
+        "functions": 85,
+        "lines": 85
+      }
+    },
+    "coveragePathIgnorePatterns": [
+      "serviceWorker.ts",
+      "index.tsx"
+    ]
   },
   "browserslist": {
     "production": [
